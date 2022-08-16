@@ -3,7 +3,7 @@ import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
 
 import buttonStyles from './buttons.module.css'
-
+import userJson from './data.json'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -24,5 +24,7 @@ document.querySelector('#app').innerHTML = `
 `
 
 document.getElementById('counter').className = buttonStyles.btn1;
+var json = JSON.stringify(userJson.user);
+console.log(json)
 
 setupCounter(document.querySelector('#counter'))
